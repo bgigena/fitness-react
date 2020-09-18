@@ -1,5 +1,5 @@
 import React from 'react'
-import circlesImg from 'https://firebasestorage.googleapis.com/v0/b/reactcrud-ee3fa.appspot.com/o/circles.png?alt=media&token=e2990ad5-d706-4e34-b3d8-1906737ca23a'
+import circlesImg from '../images/circles.png'
 import './styles/Card.css'
 
 class Card extends React.Component {
