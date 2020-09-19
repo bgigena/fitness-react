@@ -6,8 +6,7 @@ import ExerciseNew from '../pages/ExerciseNew'
 import NotFound from '../pages/NotFound'
 
 
-function App(){
-    return(
+const App = () => (
         <BrowserRouter>
             <Switch>
                 <Route exact path="/exercise" component={Exercises} />
@@ -17,6 +16,8 @@ function App(){
 
         </BrowserRouter>
     )
-}
 
 export default App;
+
+//route = renderea el path exacto o mas exacto al que se declara
+//switch = devuelve el primer match que hace

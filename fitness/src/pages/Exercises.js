@@ -2,11 +2,10 @@ import React from 'react'
 import ExerciseList from '../components/ExerciseList'
 import Welcome from '../components/Welcome'
 import AddButton from '../components/AddButton'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 class Exercises extends React.Component{
-    constructor(props){
-        super(props) //se le pasan las props al constructor base
-        this.state = {
+    state = {
             	data: [{
                     "id": 1,
                     "title": "Technique Guides",
@@ -30,17 +29,20 @@ class Exercises extends React.Component{
                     "rightColor": "#F76B1C"
                 }]
         }
-    }
+    
+
     render(){
         return(
             <div>
-                <Welcome
-                    username="Braian"
-                />
-                <ExerciseList 
-                    exercises={this.state.data}
-                />
-                <AddButton />
+                <Router>
+                    <Welcome
+                        username="Braian"
+                    />
+                    <ExerciseList 
+                        exercises={this.state.data}
+                    />
+                    <AddButton />
+                </Router>
             </div>
         )
     }
